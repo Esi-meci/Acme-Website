@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanito&display=swap');
+
+/* variables */
+:root {
+    --HEADER-BGCOLOR: rgb(53,66,74);
+    --HEADER-COLOR: rgb(103,43,44);
+    --RED: rgb(158, 13, 13);
+    --HOVER-YELLOW:  yellow;
+    --TOGGLE-COLOR:  rgb(255, 255, 255);
+}
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Nanito', sans-serif;
+}
+/* making the header and the footer sticky */
+header, footer {
+    position: sticky;
+}
+/* stling the entire header */
+header {
+    background-color: var(--HEADER-BGCOLOR);
+    border-bottom: 5px solid  rgb(158, 13, 13);
+}
+
+/* making the img, h1 and toggle a grid. to enable them align properly*/
+.top-box {
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: 0.8fr 3fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+/* styling the img and the h1*/
+.top-box img {
+    width: 100%;
+    height: auto;
+    padding-left: 5px;
+}
+header h1 {
+    font-size: 1.7rem;
+}
+.royal {
+    color:var(--RED);
+    font-size: 2rem;
+}
+
+/* styling the toggle */
+.toggle-button{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* making the toggle 3 dash properly arranged*/
+.toggle, .toggle::after, .toggle::before {   
+    background-color:var(--TOGGLE-COLOR);
+    height: 5px;
+    width: 40px;
+    border-radius: 2px;
+    position: absolute;
+}
+
+.toggle::before {
+    content : ' ';
+    transform: translate(-20px, -12px);
+}
+.toggle::after {
+    content : ' ';
+    transform: translate(-20px, 12px);
+}
+
+/* styling the nav menu */
+nav li{
+    padding: 0.7rem;
+    border-top: 1px solid var(--TOGGLE-COLOR);
+}
+nav a{
+    display: block;
+    text-align: center;  
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* hidding the nav menu */
+nav{
+    margin-top: 3px;
+    display: none;
+}
+
+/* adding dynamic color to h1 on hover */
+header:hover{
+    color:var(--HOVER-YELLOW);
+    .royal{
+        color:var(--TOGGLE-COLOR);
+    }
+
+}
+
+/* styling the toggle on hover */
+:is(header:hover, header:focus-within) .toggle {
+    background-color: transparent;
+}
+:is(header:hover, header:focus-within) .toggle::after {
+    transform: translateX(-20px) rotate(45deg);
+    background-color: var(--RED);
+}
+:is(header:hover, header:focus-within) .toggle::before {
+    transform: translateX(-20px) rotate(-45deg);
+    background-color: var(--RED);
+}
+
+/* resizing the img, h1 and toggle on hover */
+:is(header:hover, header:focus-within) .top-box {
+    grid-template-columns: 0.6fr 3fr 1fr;    
+ }
+
+:is(header:hover, header:focus-within) img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* displaying the nav menu on hover */
+:is(header:hover, header:focus-within) nav{
+    display: block;
+}
+
+
+
+
