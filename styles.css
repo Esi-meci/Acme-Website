@@ -2,11 +2,12 @@
 
 /* variables */
 :root {
-    --HEADER-BGCOLOR: rgb(53,66,74);
-    --HEADER-COLOR: rgb(103,43,44);
+    --HEADER-BGCOLOR: #35424A;
+    --HEADER-COLOR:rgb(158, 13, 13);
     --RED: rgb(158, 13, 13);
     --HOVER-YELLOW:  yellow;
     --TOGGLE-COLOR:  rgb(255, 255, 255);
+
 }
 /* css reset */
 * {
@@ -20,6 +21,10 @@ html {
 body {
     font-family: 'Nanito', sans-serif;
 }
+.container{
+    max-width: 95%;
+    margin: 0 auto;
+}
 /* making the header and the footer sticky */
 header, footer {
     position: sticky;
@@ -27,7 +32,7 @@ header, footer {
 /* stling the entire header */
 header {
     background-color: var(--HEADER-BGCOLOR);
-    border-bottom: 5px solid  rgb(158, 13, 13);
+    border-bottom: 5px solid var(--HEADER-COLOR);
 }
 
 /* making the img, h1 and toggle a grid. to enable them align properly*/
@@ -142,7 +147,7 @@ header:hover{
 .banner{
     background-image: url(resources/banner.jpeg);
     background-size: cover;
-    min-height: 270px;
+    min-height: fit-content;
     text-align: center;
     color: var(--TOGGLE-COLOR);
     font-family: 'Nanito', sans-serif;
@@ -150,19 +155,68 @@ header:hover{
 }
 .overlay{
     background-color: rgba(0,0,0,0.7);
-    height: 270px;
+    min-height: fit-content;
+    /* height: 300px; */
+    padding-top: 50px 0 ;
 }
 .banner h1{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
     font-size: 1.5em;
-    padding: 2rem 0 1.1rem;
+    padding: 2.9rem 0 1.1rem;
 }
 .banner p {
-    padding: 0 5px 0;
+    padding: 20px 5px 30px;
     font-size: 18px;    
 }
 
+
+/* styling newslater */
+section{
+    background-color: var(--HEADER-BGCOLOR);
+}
+.newslatter {    
+    min-height: 100px;
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: space-between; 
+}
+
+/* sthing the h1 in the newslater  */
+.newslatter h1{
+    color: var(--TOGGLE-COLOR);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0  0;
+}
+
+/* making the form in the newslatter start from the right */
+.newslatter form{
+    grid-column-start: -2;
+}
+
+/* making the form a grid to be able able to get the button to wrap*/
+.newslatter form {
+    display: grid;
+    padding: 12px 0;
+}
+/* style the input button on the newslatter*/
+.newslatter input{
+    height: 40px;
+    border: none;
+    margin-bottom: 6px;
+}
+/* styling the buuton on the newslater */
+.newslatter button{
+    background: var(--HEADER-COLOR);
+    color: white;
+    height: 40px;
+    border: none;
+}
+
+/* styling */
 
 
 
