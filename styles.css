@@ -96,6 +96,8 @@ nav a{
 nav{
     margin-top: 3px;
     display: none;
+    transform-origin: top center;
+    z-index: 1;
 }
 
 /* adding dynamic color to h1 on hover */
@@ -134,6 +136,31 @@ header:hover{
 /* displaying the nav menu on hover */
 :is(header:hover, header:focus-within) nav{
     display: block;
+}
+
+/* styling banner */
+.banner{
+    background-image: url(resources/banner.jpeg);
+    background-size: cover;
+    min-height: 270px;
+    text-align: center;
+    color: var(--TOGGLE-COLOR);
+    font-family: 'Nanito', sans-serif;
+    
+}
+.overlay{
+    background-color: rgba(0,0,0,0.7);
+    height: 270px;
+}
+.banner h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 1.5em;
+    padding: 2rem 0 1.1rem;
+}
+.banner p {
+    padding: 0 5px 0;
+    font-size: 18px;    
 }
 
 
