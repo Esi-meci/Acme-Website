@@ -235,8 +235,6 @@ header:hover{
     height: 40px;
     border: none;
     margin: 2% 8%;
-    
-
 }
 /* styling the buuton on the newslater */
 .newslatter button{
@@ -380,5 +378,43 @@ form h1{
     margin-top: 10px;
     height: 40px;
     font-size: 1rem;
+    
+}
+
+/* ||For small screens */
+@media screen and (min-width: 576px) {
+    .newslatter {    
+        height: 200px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center; 
+        align-content: center;
+        padding-top: 10px;
+        
+    }
+    .newslatter form {
+        display: grid;
+        grid-template-columns: auto;
+        /* align-self: center; */
+        
+
+    }
+    .newslatter input{
+        min-width: 350px;
+        height: 40px;
+        border: none;
+        margin: 2px auto;
+        
+    }
+    /* styling the buuton on the newslater */
+    .newslatter button{
+        min-width: 350px;
+        height: 40px;
+        background: var(--HEADER-COLOR);
+        color: white;
+        height: 40px;
+        border: none;
+        margin: 2px auto;        
+    }
     
 }
