@@ -17,9 +17,10 @@ body {
     width: 100vw;
     font-family: Arial, Helvetica, sans-serif;
     font-family: 'Nanito', sans-serif;
-    background-color:  #F4F4F4; 
+    background-color:  #F4F4F4;     
     min-height: 100vh;    
 }
+
 .container{
     max-width: 85%;
     margin: 0 auto;
@@ -30,7 +31,7 @@ header{
     top: 0;
 }
 /* footer{
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
 } */
@@ -40,7 +41,12 @@ header {
     border-bottom: 5px solid var(--HEADER-COLOR);
     color: var(--TOGGLE-COLOR);
 }
-
+p{
+    line-height: 1.6rem;  
+}
+h1{
+    line-height: 2.4rem;  
+}
 /* making the img, h1 and toggle a grid. to enable them align properly*/
 .top-box {
     padding-top: 15px;
@@ -172,14 +178,13 @@ header:hover{
     padding-top: 50px 0 ;
 }
 .banner h1{
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
-    font-size: 1.5em;
-    padding: 2.9rem 0 1.1rem;
+    font-size: 2rem;
+    padding: 2.9rem 0 1rem;
 }
 .banner p {
     padding: 20px 5px 30px;
-    font-size: 18px;    
+    font-size: 20px;  
 }
 
 
@@ -203,7 +208,9 @@ header:hover{
     font-size: 1.5rem;
     font-weight: 400;
     text-align: center;
-    padding: 20px 0  0;
+    padding: 20px 0  10px;
+    width: 100%;
+    line-height: 6vh;
 }
 
 /* making the form in the newslatter start from the right */
@@ -262,6 +269,7 @@ header:hover{
 }
 .languages figcaption{
     margin: 20px 0;
+    text-decoration: bold;
 }
 .languages img
 {
@@ -301,6 +309,7 @@ footer{
 .about-main h1{
     text-align: center;
     margin: 0 auto 15px;
+    font-size: larger;
 }
 /* aside{
     /* width: 100%;
@@ -330,10 +339,15 @@ footer{
 /* ||styling the service page */
 
 /* giving the form a background color */
+/* .about-main h1{
+    font-size: larger;
+} */
 .about-main form{
     background-color: var(--HEADER-BGCOLOR);
     padding: 50px 20px 20px;
     color: var(--TOGGLE-COLOR);
+    text-align: center;
+    
 }
 /* styling the h1 in the form */
 form h1{
@@ -345,14 +359,26 @@ form h1{
     background-color: #E6E6E6;
     padding: 40px 20px ;
     margin: 10px auto 0;
+}
 
+.about-main article h1{
+    font-size: 17px;
 }
 
 /* styling the form inputs */
 .about-main input {
-    width: 100%;
+    width: 98%;
     height: 35px;
+    border: none;
+    margin: 2px auto 10px;
 }
+
 .about-main input[type="submit"] {
     background-color: var(--HEADER-COLOR);
+    color: var(--TOGGLE-COLOR);
+    width: 100%;
+    margin-top: 10px;
+    height: 40px;
+    font-size: 1rem;
+    
 }
