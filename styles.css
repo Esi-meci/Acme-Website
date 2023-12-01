@@ -17,7 +17,8 @@ body {
     width: 100vw;
     font-family: Arial, Helvetica, sans-serif;
     font-family: 'Nanito', sans-serif;
-    background-color:  #F4F4F4;      
+    background-color:  #F4F4F4; 
+    min-height: 100vh;    
 }
 .container{
     max-width: 85%;
@@ -287,10 +288,16 @@ footer{
     flex-grow: 1;
     text-align: center;
 } */
-.about-main{
-    flex-grow: 1;
-}
 
+/* ||styling the About Us page */
+
+/* making sure the body covers the full height*/
+/* .about-main{
+    flex-grow: 1;
+} */
+
+
+/* styling the h1 inside the main */
 .about-main h1{
     text-align: center;
     margin: 0 auto 15px;
@@ -302,6 +309,7 @@ footer{
     color: var(--TOGGLE-COLOR);
 } */
 
+/* making a particular p tag have background color and a litle styling */
 .dark{
     background-color: var(--HEADER-BGCOLOR);
     padding: 20px;
@@ -309,6 +317,7 @@ footer{
     color: var(--TOGGLE-COLOR);
 }
 
+/* adding back color and font color to the aside class */
 .aside {
     background-color: var(--HEADER-BGCOLOR);
     color: var(--TOGGLE-COLOR);
@@ -318,16 +327,20 @@ footer{
 }
 
 
+/* ||styling the service page */
 
+/* giving the form a background color */
 .about-main form{
     background-color: var(--HEADER-BGCOLOR);
     padding: 50px 20px 20px;
     color: var(--TOGGLE-COLOR);
 }
+/* styling the h1 in the form */
 form h1{
     padding-bottom: 10px;
 }
 
+/* styling each article on in the section */
 .about-main article{
     background-color: #E6E6E6;
     padding: 40px 20px ;
@@ -335,6 +348,7 @@ form h1{
 
 }
 
+/* styling the form inputs */
 .about-main input {
     width: 100%;
     height: 35px;
