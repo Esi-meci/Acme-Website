@@ -420,13 +420,9 @@ form h1{
     justify-content: space-between;
     text-align: left;
     margin: 2px auto;
-    font-size: 15px;
-    }
-    .wider h1 {
-        font-size: 1.17rem;
     }
     .first{
-        width: 63%;
+        width: 65%;
     }
     .aside{
         width: 33%;
