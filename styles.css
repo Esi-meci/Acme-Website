@@ -22,89 +22,47 @@ body {
 }
 
 .container{
-    max-width: 85%;
+    max-width: 80%;
     margin: 0 auto;
 }
-/* making the header and the footer sticky */
-header{
-    position: sticky;
-    top: 0;
-}
-/* footer{
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-} */
-/* stling the entire header */
-header {
-    background-color: var(--HEADER-BGCOLOR);
-    border-bottom: 5px solid var(--HEADER-COLOR);
-    color: var(--TOGGLE-COLOR);
-}
-p{
-    line-height: 1.6rem;  
-}
+
+
 h1{
     line-height: 2.4rem;  
 }
-/* making the img, h1 and toggle a grid. to enable them align properly*/
+
+p{
+    line-height: 1.6rem;  
+}
+
+header{
+    background-color: var(--HEADER-BGCOLOR);
+    border-bottom: 3px solid var(--HEADER-COLOR);
+    color: var(--TOGGLE-COLOR);
+}
+
 .top-box {
-    padding-top: 15px;
-    display: grid;
-    grid-template-columns: 0.8fr 3fr 0.6fr;
-    justify-content: center;
-    align-items: center;
-    
+    padding-top: 29px;    
+    text-align: center;
 }
-/* styling the img and the h1*/
-.top-box img {
-    width: 100%;
-    height: auto;
-    margin-right: auto;
-}
+
 header h1 {
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
-.royal {
+.Acme {
     color:var(--HEADER-COLOR);
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
-/* styling the toggle */
-.toggle-button{
-    background-color: transparent;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+nav{
+    padding: 17px 19px 20px;
 }
 
-/* making the toggle 3 dash properly arranged*/
-.toggle, .toggle::after, .toggle::before {   
-    background-color:var(--TOGGLE-COLOR);
-    height: 5px;
-    width: 40px;
-    border-radius: 2px;
-    position: absolute;
-    margin-left: auto;
-    
-}
-
-/* making the toggle start from the same point */
-.toggle::before {
-    content : ' ';
-    transform: translate(-19.5px, -12px);
-}
-.toggle::after {
-    content : ' ';
-    transform: translate(-19.5px, 12px);
-}
-
-/* styling the nav menu */
 nav li{
-    padding: 0.7rem;
-    border-top: 1px solid var(--TOGGLE-COLOR);
+    padding: 0.2rem 1rem 0.2rem;
+    list-style-type: none;
+    display: inline-block;
+
 }
 nav a{
     display: block;
@@ -113,57 +71,31 @@ nav a{
     color: whitesmoke;
 }
 
-/* hidding the nav menu */
-nav{
-    margin-top: 3px;
-    display: none;
-    transform-origin: top center;
-    z-index: 1;
+nav a:focus, a:hover{
+    color: rgb(204, 204, 204);
+    font-weight: bolder;
 }
 
-/* adding dynamic color to h1 on hover */
+nav li:nth-child(2):hover{
+    width: 20%;
+    text-align: center;
+}
+
+.active{
+    color: var(--HEADER-COLOR);
+    font-weight:bolder ;
+}
+
 header:hover{
     color: yellow;
     .royal{
         color:var(--TOGGLE-COLOR);
     }
-
-}
-
-/* styling the toggle on hover */
- :is(header:hover, header:focus-within) .toggle {
-    background-color: transparent;
-}
-
-:is(header:hover, header:focus-within) .toggle::after {
-    transform: translateX(-20px) rotate(45deg);
-    background-color: var(--HEADER-COLOR);
-}
-
-:is(header:hover, header:focus-within) .toggle::before {
-    transform: translateX(-20px) rotate(-45deg);
-    background-color: var(--HEADER-COLOR);
-} 
-
-/* resizing the img, h1 and toggle on hover */
-:is(header:hover, header:focus-within) .top-box {
-    grid-template-columns: 0.6fr 3fr 1fr;    
- }
-
-:is(header:hover, header:focus-within) img {
-    width: 100%;
-    height: auto;
-}
-
-
-/* displaying the nav menu on hover */
-:is(header:hover, header:focus-within) nav{
-    display: block;
 }
 
 /* styling banner */
 .banner{
-    background-image: url(resources/banner.jpeg);
+    background-image: url(resources/banner\ background.jpg);
     background-size: cover;
     min-height: fit-content;
     text-align: center;
@@ -179,8 +111,9 @@ header:hover{
 }
 .banner h1{
     font-weight: bolder;
-    font-size: 2rem;
+    font-size: 55px;
     padding: 2.9rem 0 1rem;
+    line-height: 5rem;
 }
 .banner p {
     padding: 20px 5px 30px;
@@ -199,7 +132,7 @@ header:hover{
     grid-column-gap: 6px;
     justify-content: center; 
     align-content: center;
-    padding-top: 30px ;
+    padding-top: 20px ;
 }
 
 /* sthing the h1 in the newslater  */
@@ -232,7 +165,7 @@ header:hover{
 /* style the input button on the newslatter*/
 .newslatter input{
     min-width: 250px;
-    height: 40px;
+    height: 38px;
     border: none;
     margin: 2% 8%;
 }
@@ -242,7 +175,7 @@ header:hover{
     height: 40px;
     background: var(--HEADER-COLOR);
     color: white;
-    height: 40px;
+    height: 38px;
     border: none;
     margin: 0 8%;
     
@@ -263,7 +196,7 @@ header:hover{
 /* styling the language section */
 .languages section{
     width: 20rem;
-    padding: 20px 0;
+    padding: 5px 0 0;
 }
 .languages figcaption{
     margin: 20px 0;
@@ -271,6 +204,7 @@ header:hover{
 }
 .languages img
 {
+    margin-top: 27px;
     width: 90px;
     height: auto;
 }
@@ -282,6 +216,7 @@ footer{
     background-color: var(--HEADER-COLOR);
     color: var(--TOGGLE-COLOR);
     font-size: max(15.1px, 0.9rem);
+    margin-top: 20px;
 }
 
 /* .about-main{
@@ -317,10 +252,10 @@ footer{
 } */
 
 /* making a particular p tag have background color and a litle styling */
-.dark{
+.dark {
     background-color: var(--HEADER-BGCOLOR);
     padding: 20px;
-    margin: 25px auto;
+    margin: 25px auto 10px;
     color: var(--TOGGLE-COLOR);
 }
 
@@ -329,8 +264,11 @@ footer{
     background-color: var(--HEADER-BGCOLOR);
     color: var(--TOGGLE-COLOR);
 }
-.aside p{
+.aside p {
     padding: 0 20px 20px;
+}
+.aside h1 {
+    padding-top: 20px;
 }
 
 
@@ -342,14 +280,16 @@ footer{
 } */
 .about-main form{
     background-color: var(--HEADER-BGCOLOR);
-    padding: 50px 20px 20px;
+    margin-top: 7px;
+    padding: 18px 20px 5px;
     color: var(--TOGGLE-COLOR);
     text-align: center;
     
 }
 /* styling the h1 in the form */
 form h1{
-    padding-bottom: 10px;
+    padding: 2px;
+    font-size: 1.17em;
 }
 
 /* styling each article on in the section */
@@ -357,6 +297,7 @@ form h1{
     background-color: #E6E6E6;
     padding: 40px 20px ;
     margin: 10px auto 0;
+    border: 1px solid #cccccc;
 }
 
 .about-main article h1{
@@ -415,6 +356,5 @@ form h1{
         height: 40px;
         border: none;
         margin: 2px auto;        
-    }
-    
+    } 
 }
