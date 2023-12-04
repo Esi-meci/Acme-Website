@@ -35,17 +35,20 @@ p{
     line-height: 1.6rem;  
 }
 
+ /* styling the general header giveing it color and a border bottom */
 header{
     background-color: var(--HEADER-BGCOLOR);
     border-bottom: 3px solid var(--HEADER-COLOR);
     color: var(--TOGGLE-COLOR);
 }
 
+/* create a space at the top of the page and aligning the text to the centet */
 .top-box {
     padding-top: 29px;    
     text-align: center;
 }
 
+/* styling the h1 in the header */
 header h1 {
     font-size: 2rem;
 }
@@ -54,6 +57,7 @@ header h1 {
     font-size: 2rem;
 }
 
+/* styling the nav bar */
 nav{
     padding: 17px 19px 20px;
 }
@@ -71,12 +75,15 @@ nav a{
     color: whitesmoke;
 }
 
+/* styling the links on hover, focus and active */
 nav a:focus, a:hover{
     color: rgb(204, 204, 204);
     font-weight: bolder;
 }
 
+
 nav li:nth-child(2):hover{
+    /* making the nav bar increase in width when the second item on the list is hovered on */
     width: 20%;
     text-align: center;
 }
