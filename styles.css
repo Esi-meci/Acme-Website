@@ -226,37 +226,12 @@ footer{
     margin-top: 20px;
 }
 
-/* .about-main{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    margin: 0 auto 30px;
-    margin-inline: auto;
-    /* max-width: 50px; 
-    flex-grow: 1;
-    text-align: center;
-} */
-
-/* ||styling the About Us page */
-
-/* making sure the body covers the full height*/
-/* .about-main{
-    flex-grow: 1;
-} */
-
-
 /* styling the h1 inside the main */
 .about-main h1{
     text-align: center;
     margin: 0 auto 15px;
     font-size: larger;
 }
-/* aside{
-    /* width: 100%;
-    background-color: var(--HEADER-BGCOLOR);
-    padding: 20px ;
-    color: var(--TOGGLE-COLOR);
-} */
 
 /* making a particular p tag have background color and a litle styling */
 .dark {
@@ -281,10 +256,7 @@ footer{
 
 /* ||styling the service page */
 
-/* giving the form a background color */
-/* .about-main h1{
-    font-size: larger;
-} */
+/* giving the form a background color and general styling*/
 .about-main form{
     background-color: var(--HEADER-BGCOLOR);
     margin-top: 7px;
