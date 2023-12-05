@@ -86,11 +86,7 @@ nav a:focus, a:hover{
 }
 
 
-nav li:nth-child(2):hover{
-    /* making the nav bar increase in width when the second item on the list is hovered on */
-    width: 20%;
-    text-align: center;
-}
+
 
 .active{
     color: var(--HEADER-COLOR);
@@ -155,10 +151,6 @@ header:hover{
     grid-column-start: 0;
 }
 
-/* making the form in the newslatter start from the right */
-.newslatter form{
-    grid-column-start: -2;
-}
 
 /* making the form a grid to be able able to get the button to wrap*/
 .newslatter form {
@@ -166,7 +158,9 @@ header:hover{
     grid-template-columns: repeat(auto-fill, minmax(161px, 1fr));
     align-content: center;
     justify-content: space-around;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
+    /* making the form in the newslatter start from the right */
+    grid-column-start: -2;
 }
 /* style the input button on the newslatter*/
 .newslatter input{
@@ -223,10 +217,16 @@ footer{
 }
 
 /* styling the h1 inside the main */
+.about-main{
+    padding-top: 20px;
+}
 .about-main h1{
     text-align: center;
     margin: 0 auto 15px;
     font-size: larger;
+}
+.about-main p{
+    text-align: center;
 }
 
 /* making a particular p tag have background color and a litle styling */
@@ -270,7 +270,7 @@ form h1{
 /* styling each article on in the section */
 .about-main article{
     background-color: #E6E6E6;
-    padding: 40px 20px ;
+    padding: 25px 20px ;
     margin: 10px auto 0;
     border: 1px solid #cccccc;
 }
@@ -297,15 +297,22 @@ form h1{
     
 }
 
-/* ||For small screens */
+/* ||FOR SMALL SCREEN AND MEDIUM SCREEN */
 @media screen and (min-width: 576px) {
+    nav li:nth-child(2):hover{
+        /* making the nav bar increase in width when the second item on the list is hovered on */
+        width: 15.6%;
+        text-align: center;
+    }
     nav li{
         padding: 0.2rem 1.2rem 0.2rem;
     }
+    /* readjusting the  the banner content */
     .banner p {
         padding: 10px 5px 30px;
         font-size: 20px; 
     }
+    /* readjusting the newslatter and its content */
     .newslatter {   
         height: 160px;
         padding: 20px 0 2px; 
@@ -318,24 +325,25 @@ form h1{
     .newslatter form {
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
-    .languages section{
-        width: 100%;
-    }
     .newslatter input{
         margin: 1% 8%;
     }
+    .languages section{
+        width: 100%;
+    }
+    /* making the input and textarea for for small screen */
     .about-main input {
         width: 98%;
         height: 35px;
         border: none;
         margin: 2px auto 10px;
-    }
-    
+    }    
     .about-main textarea {
         width: 98%; 
     }   
 }
 
+/* ||LARGE SCREEN */
 @media screen and (min-width: 991px) {
     .top-box {
         display: flex;
@@ -364,7 +372,7 @@ form h1{
     }
     .newslatter {    
         padding-top: 0;
-        height:120px;
+        height: 120px;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
@@ -407,31 +415,85 @@ form h1{
         font-size: larger;
     }
     .dark {
-        background-color: var(--HEADER-BGCOLOR);
         padding: 20px;
         margin: 25px 0 10px;
     }
+
+    /* calling a new class to style the about articules for a medium screen */
     .wider{
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row ;
     align-content: center;
-    margin-inline: auto;
     justify-content: space-between;
     text-align: left;
-    margin: 2px auto;
     font-size: 15px;
+    padding: 0;
     }
     .wider h1 {
         font-size: 1.17rem;
+        text-align: left;
+        padding-left: 0;
     }
     .first{
         width: 63%;
+
     }
     .aside{
+        margin-top: 18px;        
         width: 33%;
         max-height: 35ch;
         justify-self: end;
     }
+    .aside form{
+        text-align: left;
+    }
+    .aside input[type=submit]{
+        width: 35%;
+        margin: 6px 80% 10px 5px;
+        
+    }
+    .about-main article{
+        padding-top: 15px;
+        padding-bottom: 25px;
+        margin-top: 5px;
+    }
+    .about-main article h1{   
+        margin-bottom: 8px;
+    }
+    .second{
+        padding-left: 20px !important;
+    }
+    .wider, .about-main p{
+        text-align: left;
+    }
+    .languages section{
+        width: 33%;
+    }
 
 } 
+/* XL SCREEN */
+@media screen and (min-width: 1200PX) {
+    .newslatter {   
+        justify-content: space-between;
+        height: 100px;
+        padding: 0;
+    }
+    .New_section h1 {
+        justify-self: start;
+    }
+    .newslatter form {
+        justify-content: end;
+        gap: 5px;
+    }
+    /* style the input button on the newslatter*/
+    .newslatter input{
+        width: 300px;
+    }
+    /* styling the buuton on the newslater */
+    .newslatter button{
+        border: 10px solid var(--HEADER-COLOR);
+        height: 38px;
+        width: 110px;
+    }
+}
+
